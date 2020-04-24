@@ -4,12 +4,11 @@ namespace Cirote\Opciones\Models;
 
 use Illuminate\Support\Collection;
 use Tightenco\Parental\HasParent;
-use Cirote\Opciones\Config\Config;
 use Carbon\Carbon;
-
-use App\Models\Activos\Activo;
-use App\Models\Activos\Ask;
-use App\Models\Activos\Bid;
+use Cirote\Opciones\Config\Config;
+use Cirote\Activos\Models\Activo;
+use Cirote\Activos\Models\Ask;
+use Cirote\Activos\Models\Bid;
 
 class Call extends Activo
 {
@@ -56,40 +55,12 @@ class Call extends Activo
 		return Carbon::now()->diffInDays($this->vencimiento);
 	}
 
-	public function getLote() 
+	public function getLoteAttribute() 
 	{
 		if ($this instanceof Bono)
 			return 5000;
 
 		return 100;
-	}
-
-	private $bid;
-
-	public function getBidAttribute()
-	{
-		if (!$this->bid)
-		{
-			$this->bid = new Bid();
-
-			$this->bid->subyacente = $this;
-		}
-
-		return $this->bid;
-	}
-
-	private $ask;
-
-	public function getAskAttribute()
-	{
-		if (!$this->ask)
-		{
-			$this->ask = new Ask();
-
-			$this->ask->subyacente = $this;
-		}
-
-		return $this->ask;
 	}
 
 	private $precio_teorico;

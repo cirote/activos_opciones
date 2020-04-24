@@ -6,10 +6,9 @@ use Illuminate\Support\Collection;
 use Tightenco\Parental\HasParent;
 use Cirote\Opciones\Config\Config;
 use Carbon\Carbon;
-
-use App\Models\Activos\Activo;
-use App\Models\Activos\Ask;
-use App\Models\Activos\Bid;
+use Cirote\Activos\Models\Activo;
+use Cirote\Activos\Models\Ask;
+use Cirote\Activos\Models\Bid;
 
 class Put extends Activo
 {

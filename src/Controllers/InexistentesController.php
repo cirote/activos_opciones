@@ -8,8 +8,7 @@ use Cirote\Opciones\Config\Config;
 use Cirote\Opciones\Models\Inexistente;
 use Cirote\Opciones\Actions\AgregarOpcionesInexistentesAction;
 use Cirote\Opciones\Actions\BorrarOpcionesInexistentesAction;
-
-use App\Models\Activos\Activo;
+use Cirote\Activos\Models\Activo;
 
 class InexistentesController extends Controller
 {

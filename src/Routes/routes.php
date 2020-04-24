@@ -27,11 +27,3 @@ Route::middleware(['web'])->namespace('Cirote\Opciones\Controllers')
 		Route::get('/', 'OpcionesController@index')->name('index');
 		Route::get('/{activo}', 'OpcionesController@activo')->name('activo');
 	});
-
-Route::middleware(['web'])->namespace('Cirote\Opciones\Controllers')
-	->prefix('estrategias')
-	->name('estrategias.')
-	->group(function() 
-	{
-		Route::get('/lanzamiento', 'EstrategiasController@lanzamiento_cubierto')->name('lanzamiento_cubierto');
-	});

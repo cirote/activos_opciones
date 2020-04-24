@@ -7,8 +7,7 @@ use Cirote\Opciones\Config\Config;
 use Cirote\Opciones\Actions\CalcularStrikeOpcionAction;
 use Cirote\Opciones\Actions\CalcularTickerCompletoOpcionAction;
 use Cirote\Opciones\Actions\CalcularVencimientoOpcionAction;
-
-use App\Models\Activos\Activo;
+use Cirote\Activos\Models\Activo;
 use Cirote\Opciones\Models\Call;
 use Cirote\Opciones\Models\Put;
 

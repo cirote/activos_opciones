@@ -4,13 +4,14 @@ namespace Cirote\Opciones\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Cirote\Activos\Models\Inexistente;
+use Cirote\Opciones\Models\Inexistente;
 use Cirote\Opciones\Actions\CalcularTickerCompletoOpcionAction;
 
-use App\Models\Activos\Activo;
-use App\Models\Activos\Accion;
-use App\Models\Activos\Precio;
-use App\Models\Activos\Ticker;
+use Cirote\Activos\Models\Activo;
+use Cirote\Activos\Models\Accion;
+use Cirote\Activos\Models\Precio;
+use Cirote\Activos\Models\Ticker;
+
 use App\Models\Activos\Monedas\Dolar;
 
 class DatosController extends Controller
