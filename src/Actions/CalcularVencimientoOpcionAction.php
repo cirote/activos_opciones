@@ -50,8 +50,14 @@ class CalcularVencimientoOpcionAction
     private function getMesFromSigla(string $mes): int
     {
         return [
+            'FE' => 2,
+            'AB' => 4,
             'MY' => 5,
             'JU' => 6,
-            'AG' => 8
+            '7J' => 7,
+            '7G' => 8,
+            'AG' => 8,
+            'OC' => 10,
+            'DI' => 12
         ][$mes] ?? null;
     }}
