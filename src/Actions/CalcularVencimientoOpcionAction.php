@@ -57,6 +57,7 @@ class CalcularVencimientoOpcionAction
             '7J' => 7,
             '7G' => 8,
             'AG' => 8,
+            'SE' => 9,
             'OC' => 10,
             'DI' => 12
         ][$mes] ?? null;
